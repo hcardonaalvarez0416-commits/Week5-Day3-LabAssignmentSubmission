@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+     <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="About">
+
+
+    
+    <div id="container">
+
+        
+        <header> 
+      <img src="images/oakland 3.png" alt="Our community" width="1280" height="564">
+
+      <div class="main-header">     
+          <div class="logo">
+            <img src="images/oaklans.jpg" alt="Meet Your Soulmate Logo" width="125">
+
+          </div>    
+        
+        
+        
+        </div>
+        <nav class="main-menu"> 
+
+            
+          <ul>
+            <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="page2.html">About</a></li>
+          <li><a href="page4.html">Gallery</a></li>
+          <li><a href="page3.html">Contact</a></li>
+          
+          </ul>
+              
+        </nav>
+    </header>
+
+       
+        <main>
+            <h1>Meet our Staff</h1>
+            <p>Here are the people who make your dream reality!</p>
+            
+            
+            <table border="1">
+                <caption>Team Members and their Soul Mates</caption>
+                <thead>
+                    <tr>
+                        <th>Coordinator</th>
+                        <th>Soul Mate</th>
+                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Caro</td>
+                        <td>Teo</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Juan Se</td>
+                        <td>Hoshi</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Ivanna</td>
+                        <td>Lola & Galileo</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Rene</td>
+                        <td>Manu</td>
+                        
+                    </tr>
+                </tbody>
+                <tfoot>
+                    
+                </tfoot>
+            </table>
+
+
+            <ul id="album2">
+                <!-- <li class="photo"><img src="images/pet1.jpeg" alt="Teo" /></li>
+                <li class="photo"><img src="images/pet2.jpeg" alt="Hoshi" /></li>
+                <li class="photo"><img src="images/pet3.jpeg" alt="Lola & Galileo" /></li>
+                <li class="photo"><img src="images/pet4.jpeg" alt="Manu" /></li> -->
+        </ul>
+ 
+            
+
+        </main>
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- Footer information -->
+        <footer>&copy; Copyright 2022  Westcliff Project</footer>
+
+    </div>
+    <!-- End Container -->
+
+<script>
+    var photos = []; //Declare an empty array to store image element
+    var fileNames = []; //Declare an empty element to store image file names
+    var imageList = []; //Declare an empty array to store html list that contain an image
+    var image; //Declare an empty variable to store the assembled image list codes
+    var openList = "<li class='photo'>"; //Declare a variable to contain open list tag
+    var closeList = "</li>"; //Declare a variable to contain close list tag
+
+    var captions = [
+        "Teo", "Hoshi", "Lola & Galileo", "Manu",
+    ];
+
+    //Create a loop to create 18 images starting with index of 0
+    for (var i = 0; i < 4; i++) {
+        fileNames.push("pet" + (i + 1)); //Create image file name and store in the array
+        photos.push("<img src='images/" + fileNames[i] + ".jpeg'>"); //Assemble file name into image element and store in an array
+        
+        
+        var captionHtml = "<div class='caption'>" + captions[i] + "</div>";
+        
+        image = openList + photos[i] + captionHtml + closeList; 
+        
+        imageList.push(image); //Store(push) the assembled list codes into an array
+    }
+
+    document.getElementById("album2").innerHTML = imageList.join(""); 
+</script>
+
+
+
+
+
+
+</body>
+</html>
